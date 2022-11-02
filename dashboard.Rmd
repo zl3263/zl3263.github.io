@@ -1,0 +1,89 @@
+---
+title: "Exploring ny_noaa dataset"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    source_code: embed
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(tidyverse)
+library(p8105.datasets)
+library(plotly)
+
+data("ny_noaa")
+ny_noaa = na.omit(ny_noaa) %>%
+  separate(date,c("year","month","day"),remove = FALSE) %>%
+  mutate(
+    year = as.integer(year)    
+  ) %>%
+    filter(year > 1999) %>%
+  mutate(
+    tmax = round(as.numeric(tmax)/10,2) ,
+    tmin = round(as.numeric(tmin)/10,2) ,
+    prcp = prcp/10
+         ) %>%
+  select(-day)
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Precipitation in Each Month
+
+```{r}
+ny_noaa %>%
+  group_by(month,year,id) %>%
+  summarise(
+    mean_station = mean(prcp)
+  ) %>%
+  plot_ly(y = ~mean_station, color = ~month, type = "box", colors = "viridis") %>%
+  layout(yaxis = list(title = "Precipitation(mm)"),
+         xaxis = list(title = "Month"))
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Temperature Differences(2000 - 2010)
+
+```{r}
+t_diff =  ny_noaa %>%
+  group_by(date) %>%
+  summarise(
+    tmax = round(mean(tmax),2),
+    tmin = round(mean(tmin),2)
+  ) %>%
+  
+  
+  ggplot(aes(x = date))+
+  geom_line(aes(y = tmax),color = "red",alpha = 0.3, size = 0.5) +
+  geom_line(aes(y = tmin),color = "blue", alpha = 0.3, size = 0.5) +
+  geom_ribbon(aes(ymin = tmin, ymax = tmax), fill = "grey", alpha = 0.5) +
+  ylab("Temperature(C)")
+
+t_diff = ggplotly(t_diff)
+
+t_diff
+```
+
+### Temperature Differences VS Precepitation
+
+```{r}
+diff_prcp = ny_noaa %>%
+  group_by(date,month) %>%
+  summarise(
+    tmax = mean(tmax),
+    tmin = mean(tmin),
+    prcp = round(mean(prcp),2)
+  ) %>%
+  mutate(diff = round(tmax - tmin,2)) %>%
+  plot_ly(x = ~diff , y = ~prcp , color = ~month) %>%
+  layout(yaxis = list(title = "Temperature Difference in a Day(C)"),
+         xaxis = list(title = "Precipitation(mm)"))
+
+diff_prcp
+
+```
+

@@ -6,7 +6,7 @@ navbar:
       href: index.html
   right:
     - text: "PROBLEM2"
-      href: Problem2.html
+      href: dashboard.html
     - text: "RESUME"
       href: Resume.html
     - icon: fa-envelope fa-lg
