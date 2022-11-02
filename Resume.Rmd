@@ -1,0 +1,77 @@
+---
+title: "Zizhao(Jessica) Lin"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: lumen
+---
+
+(201)888-9623 | zl3263\@cumc.columbia.edu | New York, NY
+
+------------------------------------------------------------------------
+
+
+## EDUCATION
+
+<br> 
+
+### Columbia University
+
+|                                    |                   |
+|:-----------------------------------|------------------:|
+| Master of Science in Biostatistics | Expected May 2024 |
+
+### Southern University of Science and Technology (SUSTech)
+
+|                                       |                      |
+|:--------------------------------------|---------------------:|
+| Bachelor of Science in Bioinformatics | Received in Jun 2022 |
+
+------------------------------------------------------------------------
+
+## RESEARCH EXPERIENCES
+
+|                                       |                      |
+|:--------------------------------------|---------------------:|
+| **Benchmark of batch correcting methods for scRNA-seq data** | Jun 2021 – Apr 2022 |
+
+- Benchmarked performance of various batch-effect correction methods in terms of accuracy and efficiency on both R and Python.
+- Selected suitable batch-effect correction methods according to the needs of downstream analysis to provide researchers practical suggestions on method selection
+
+|                                       |                      |
+|:--------------------------------------|---------------------:|
+| **Applied Reinforcement Learning to Neuro Signaling Analysis (Online)** | Feb 2021 – May 2021 |
+
+- Benchmarked performance of several algorithms including linear, non-linear classifiers, ensemble learning and neural network on EEG data, trying to find suitable classifier for sleep staging.
+
+|                                       |                      |
+|:--------------------------------------|---------------------:|
+| **Computational Approach to Disease-Related Gene Regulatory Network** | Dec 2020 – Feb 2021 |
+
+- Performed a correlation analysis between ATAC-seq data and gene expression to find the potential enhancers (utilized the published data on TCGA)
+
+|                                       |                      |
+|:--------------------------------------|---------------------:|
+| **Mechanism of Dorsal horn VGluT3 Neuron Mediated Dynamic Touch-induced Pain** | Mar 2019 – Sep 2019 |
+
+-	Learned experimental skills: Genotype identification, tissue slide and staining, mice dissection
+-	Observed the distribution of Lbx1 lineage neurons marked by Ai14-tdTomato to examine the Cre-Loxp system’s working for further electrophysiological experiment
+
+
+
+------------------------------------------------------------------------
+
+## ACTIVITIES
+
+-	Participated in the recruitment promotion events of the university in 2019
+-	Having played the Chinese traditional musical instrument Guzheng for years and performed in the university’s folk band
+
+------------------------------------------------------------------------
+
+## RELEVANT SKILLS
+
+Programing Language: Java, Python, MATLAB, R 
+
+Software: Bowtie2, STAR, Scanpy 
+

@@ -1,12 +1,27 @@
 ---
-title: "My awesome website"
+#title: "Hello, World!"
 output: 
   html_document:
-    toc: true
-    toc_float: true
-    theme: cerulean
+    theme: lumen
 ---
 
-# This is My's awesome website
+<br>
+<br>
+<br>
+  
+<font size=10rem, face="Arial Black"> Hello, World! </font>
 
-![](https://media.giphy.com/media/drXGoW1iudhKw/giphy.gif)
+<font size=3rem color=grey face="Arial Black"> **Hey traveler, it's so good to see you. :)** </font>
+  
+<br>
+
+<img src="index_pic.gif" style="width:30%">
+
+<br>
+<font color = lightgrey face="Arial Black">This page is created by zl3263 for her homework 4 in the Data Science course.</font>
+
+
+<font color=grey face="Arial Black"> Have Fun! </font>
+
+
+
